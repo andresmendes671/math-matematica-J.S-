@@ -6,11 +6,20 @@ function buttonPressed() {
     const minimum = Math.ceil(document.querySelector(".min").value)
     const maximum = Math.floor(document.querySelector(".max").value)
 
-    const result = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+    if (minimum < maximum) {
 
-    alert(result)
+        const result = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+        alert(result)
+
+    }
+
+    else {
+        alert('o valor minimo nao pode ser maior que o valor maximo')
+
+    }
+
 }
-
 
 
 
